@@ -1,7 +1,7 @@
-// Dependecncies
+// Declare dependencies for the app
 const util = require('util');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid'); // Newest update
+const { v4: uuidv4 } = require('uuid');
 
 
 const readNote = util.promisify(fs.readFile);
@@ -43,7 +43,7 @@ class Save {
             .then(() => newNote);
     }
 
-    // Delete Note function - BONUS
+    // BONUS - note delete function
     deleteNote(id) {
         return this.retrieveNotes()
             .then(notes => notes.filter(note => note.id !== id))

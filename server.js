@@ -5,20 +5,18 @@ const express = require('express');
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-// Create an express server
+// Create an express server and sets a flexible port for HEROKU deployment
 const app = express();
-
-// Set PORT
 const PORT = process.env.PORT || 3001;
 
-// Parse incoming string or array data
+// Middleware
 app.use(express.urlencoded({ extended: true }));
-
-// Parse incoming JSON data
 app.use(express.json());
 
 
 app.use(express.static('public'));
+
+//Use Routes
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 

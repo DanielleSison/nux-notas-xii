@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 
-// This has to be on the top than the other routers
+//Routes to the HTML files
 router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// If no matching route is found default to home page
+// Default to home page when given writing a different route not provided
 router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
