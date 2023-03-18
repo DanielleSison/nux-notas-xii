@@ -43,7 +43,7 @@ Below is a screenshot of the deployed note taker app in Heroku.
 
 ![Homepage](./public/assets/img/default.png)
 
-<li>NoteS sample</li>
+<li>Notes sample</li>
 
 ![Homepage](./public/assets/img/sample-2.png)
 
